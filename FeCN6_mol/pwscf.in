@@ -1,0 +1,62 @@
+&CONTROL
+  calculation = 'scf'
+  etot_conv_thr =   1.5000000000d-03
+  forc_conv_thr =   1.0000000000d-04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  tprnfor = .true.
+  tstress = .true.
+/
+&SYSTEM
+  degauss =   2.0000000000d-02
+  ecutrho =   3.2000000000d+02
+  ecutwfc =   4.0000000000d+01
+  ibrav = 0
+  nat = 13
+  nbnd = 200
+  nosym = .false.
+  ntyp = 6
+  occupations = 'smearing'
+  lda_plus_U = .true.
+  Hubbard_U(2) = 5.0
+  Hubbard_U(6) = 6.0
+  smearing = 'mp'
+  nspin = 2
+  starting_magnetization(1) =   1.0000000000d-01
+  starting_magnetization(2) =   4.1666666667d-01
+  starting_magnetization(6) =   4.1666666667d-01
+/
+&ELECTRONS
+  conv_thr =   4.2200000000d-08
+  electron_maxstep = 300
+  mixing_beta =   1.0000000000d-01
+/
+&IONS
+/
+ATOMIC_SPECIES
+O      15.9994 O.pbe-n-kjpaw_psl.0.1.UPF
+Ce     140.116 Ce.paw.z_12.atompaw.wentzcovitch.v1.2.upf
+H      1.00794 H.pbe-rrkjus_psl.1.0.0.UPF
+N      14.0067 N.pbe-n-radius_5.UPF
+C      12.0107 C.pbe-n-kjpaw_psl.1.0.0.UPF
+Fe     55.845 Fe.pbe-spn-kjpaw_psl.0.2.1.UPF
+ATOMIC_POSITIONS (angstrom)
+N             7.9022765204        8.8450503112       12.5640422404
+C             7.7199703337        8.3692529928       13.6258102658
+N             5.7382286083        5.3510580461       14.4156288103
+C             6.4065523857        6.2673312017       14.7324177500
+N            10.2018661413        5.9974431757       15.3069171823
+C             9.2200556932        6.6384313994       15.3854021119
+Fe            7.5055248373        7.7966896940       15.6144241216
+C             5.7924496118        8.9518105576       15.8556184757
+N             4.8152143001        9.5996809308       15.9285698300
+C             8.6047971552        9.3194708393       16.5105356098
+N             9.2663321711       10.2437259192       16.8194865270
+C             7.2925111819        7.2307174971       17.6046406678
+N             7.0992710600        6.7447274352       18.6597464075
+K_POINTS gamma
+CELL_PARAMETERS angstrom
+     23.1964263916       0.0000000000       0.0000000000
+    -11.5982158708      20.0886929877       0.0000000000
+      0.0000000000       0.0000000000      30.0000000000
